@@ -100,7 +100,7 @@
 }
 
 .padding-text{
-    padding: 0px 50px 0px 30px
+    padding: 0px 50px 0px 100px
 }
 
 #carousel img {
@@ -111,12 +111,12 @@
     display: block;
 }
 
-#carousel, #caption {
-    display: none;
+img.active + .text-right {
+    display: block;
 }
 
-#carousel, #caption {
-    display: block;
+img + .text-right {
+    display: none;
 }
 
 

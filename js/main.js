@@ -57,6 +57,7 @@ btnNext.addEventListener('click', () => {
         currentIndex = 0; 
     }
     showImage(currentIndex);
+    showText(currentIndex);
 })
 
 // Gestione del pulsante "Indietro"
@@ -71,4 +72,5 @@ btnPrev.addEventListener('click', () => {
         currentIndex = totalImages - 1; 
     }
     showImage(currentIndex);
+    showText(currentIndex);
 })
