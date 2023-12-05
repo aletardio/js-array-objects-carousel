@@ -30,3 +30,25 @@ const btnPrev = document.getElementById('prev');
 
 // Riferimento al pulsante "Avanti"
 const btnNext = document.getElementById('next');
+
+// Dichiarazione di una variabile per tenere traccia dell'indice corrente dell'immagine visualizzata
+let currentIndex = 0; 
+
+// Riferimento per il numero totale di elementi all'interno del carosello
+const totalImages = document.querySelectorAll('.carousel-item').length;
+
+// Gestione del pulsante "Avanti"
+btnNext.addEventListener('click', () => {
+    // Controlla se l'indice corrente è inferiore al numero totale di elementi - 1
+    if (currentIndex < totalImages - 1) {
+
+        currentIndex++;
+
+        } 
+
+    else {
+
+        currentIndex = 0; 
+
+        }
+    })
