@@ -24,14 +24,9 @@ const images = [
 
 // Funzione che permette di ottenere il carosello delle immagini
 function showImage(index) {
-
     const carouselImages = document.querySelectorAll('#carousel img');
     carouselImages.forEach(img => img.classList.remove('active'));
     carouselImages[index].classList.add('active');
-
-    const caption = document.querySelectorAll('#carousel, #caption');
-    caption.forEach(text => text.classList.remove('active'));
-    caption[index].classList.add('active');
 }
 
 // Riferimento all'elemento carosello
