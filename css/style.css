@@ -102,3 +102,22 @@
 .padding-text{
     padding: 0px 50px 0px 30px
 }
+
+#carousel img {
+    display: none;
+}
+
+#carousel img.active {
+    display: block;
+}
+
+#carousel, #caption {
+    display: none;
+}
+
+#carousel, #caption {
+    display: block;
+}
+
+
+

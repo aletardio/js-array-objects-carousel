@@ -22,20 +22,32 @@ const images = [
     }
 ];
 
+// Funzione che permette di ottenere il carosello delle immagini
+function showImage(index) {
+
+    const carouselImages = document.querySelectorAll('#carousel img');
+    carouselImages.forEach(img => img.classList.remove('active'));
+    carouselImages[index].classList.add('active');
+
+    const caption = document.querySelectorAll('#carousel, #caption');
+    caption.forEach(text => text.classList.remove('active'));
+    caption[index].classList.add('active');
+}
+
 // Riferimento all'elemento carosello
-const carousel = document.getElementById('carousel');
+let carousel = document.getElementById('carousel');
 
 // Riferiment0 al pulsante "Indietro"
-const btnPrev = document.getElementById('prev');
+let btnPrev = document.querySelector('.prev');
 
 // Riferimento al pulsante "Avanti"
-const btnNext = document.getElementById('next');
+let btnNext = document.querySelector('.next');
 
 // Dichiarazione di una variabile per tenere traccia dell'indice corrente dell'immagine visualizzata
-let currentIndex = 0; 
+let currentIndex = 0;
 
 // Riferimento per il numero totale di elementi all'interno del carosello
-const totalImages = document.querySelectorAll('.carousel-item').length;
+let totalImages = document.querySelectorAll('#carousel img').length;
 
 // Gestione del pulsante "Avanti"
 btnNext.addEventListener('click', () => {
@@ -49,7 +61,8 @@ btnNext.addEventListener('click', () => {
 
         currentIndex = 0; 
     }
-    })
+    showImage(currentIndex);
+})
 
 // Gestione del pulsante "Indietro"
 btnPrev.addEventListener('click', () => {
@@ -62,4 +75,5 @@ btnPrev.addEventListener('click', () => {
 
         currentIndex = totalImages - 1; 
     }
+    showImage(currentIndex);
 })
