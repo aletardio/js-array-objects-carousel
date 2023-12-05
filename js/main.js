@@ -43,12 +43,23 @@ btnNext.addEventListener('click', () => {
     if (currentIndex < totalImages - 1) {
 
         currentIndex++;
-
-        } 
+    } 
 
     else {
 
         currentIndex = 0; 
-
-        }
+    }
     })
+
+// Gestione del pulsante "Indietro"
+btnPrev.addEventListener('click', () => {
+    // Controlla se l'indice corrente è maggiore di 0
+    if (currentIndex > 0) {
+
+        currentIndex--;
+    }
+    else {
+
+        currentIndex = totalImages - 1; 
+    }
+})
